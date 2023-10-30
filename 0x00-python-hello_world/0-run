@@ -1,2 +1,2 @@
-#!bin/bash
-python3 /path/to/your_python_script.py
+#!/bin/bash
+python3 $PYFILE
