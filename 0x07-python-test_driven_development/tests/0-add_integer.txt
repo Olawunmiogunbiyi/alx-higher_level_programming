@@ -1,0 +1,57 @@
+""" tests to validate behavior of """
+
+
+	"""
+	importing module
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    	"""
+
+    Usage:
+	Test1:
+	::
+        >>> print(add_integer(1, 2))
+        3
+
+	Test2:
+	::
+        >>> print(add_integer(100, -2))
+        98
+
+	Test3:
+	::
+        >>> print(add_integer(2))
+        100
+
+	Test4:
+	::
+        >>> print(add_integer(100.3, -2))
+        98
+
+	Test5:
+	::
+        >>> print(add_integer(4, "School"))
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+	Test6:
+	::
+        >>> print(add_integer())
+        Traceback (most recent call last):
+        ...
+        TypeError: add_integer() missing 1 required positional argument: 'a'
+	
+	Test7:
+	::
+	>>> print(add_integer(4, 7, 8))
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+	Test8:
+	::
+	>>> print(add_integer('a'))
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
