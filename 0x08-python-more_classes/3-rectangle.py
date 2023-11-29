@@ -1,25 +1,25 @@
-#bin/usr/python3
-#define a class
+#!/usr/bin/python3
+""" function to define attr of rectangle """
 
-class Rectangle
 
-#private instance attribute
+class Rectangle:
+    """ a class called rectangle
+        Args:
+            width - of rectangle
+            height - of rectangle
 
-"""
-width - of rectangle
-height -of rectangle
+        Raises:
+            TypeError - if not int
+            ValueError - if value is less than zero
+        """
 
-Reaise:
-    TypeError if not int
-    ValueError if is less than zero"""
+    def __init__(self, width=0, height=0):
+        """ initializes an instance of rectangle """
 
-def __init__(self, width=0, height=0):
+        self.__width = width
+        self.__height = height
 
-    #initialize an instance of rectangle
-    self.width = 0
-    self.height = 0
-
-       @property
+    @property
     def width(self):
         """ returns width of rectangle """
 
