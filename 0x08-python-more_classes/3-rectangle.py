@@ -1,25 +1,25 @@
-#!/usr/bin/python3
-#function to define attr of rectangle """
+#bin/usr/python3
+#define a class
 
+class Rectangle
 
-class Rectangle:
-    """ a class called rectangle
-        Args:
-            width - of rectangle
-            height - of rectangle
+#private instance attribute
 
-        Raises:
-            TypeError - if not int
-            ValueError - if value is less than zero
-        """
+"""
+width - of rectangle
+height -of rectangle
 
-    def __init__(self, width=0, height=0):
-        """ initializes an instance of rectangle """
+Reaise:
+    TypeError if not int
+    ValueError if is less than zero"""
 
-        self.__width = width
-        self.__height = height
+def __init__(self, width=0, height=0):
 
-    @property
+    #initialize an instance of rectangle
+    self.width = 0
+    self.height = 0
+
+       @property
     def width(self):
         """ returns width of rectangle """
 
@@ -63,3 +63,11 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return (2 * (self.__width + self.__height))
+
+    def __str__(self):
+        """ return a stirn representation of our object """
+
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        output = ['#' * self.__width for i in range(self.__height)]
+        return "\n".join(output)
