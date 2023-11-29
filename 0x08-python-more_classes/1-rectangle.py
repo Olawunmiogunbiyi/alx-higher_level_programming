@@ -1,44 +1,46 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
+""" function to define attr of rectangle """
 
-#define rectangle
 
 class Rectangle:
+    """ a class called rectangle """
+
     def __init__(self, width=0, height=0):
+        """ initializes an instance of rectangle """
 
-        #private attribute for witdth
-        self._width = 0
+        self.__width = width
+        self.__height = height
 
-        #private attribute for witdth
-        self._height = 0
-
-        #set width  using the proper setter
-        self.width = width
-
-        #set height using the proper setter
-        self.height = height
-
-        @property
+    @property
     def width(self):
-        return self._width
+        """ returns width of rectangle """
+
+        return (self.__width)
 
     @width.setter
     def width(self, value):
+        """ sets the attribute width """
+
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self._width = value
+
+        self.__width = value
 
     @property
     def height(self):
-        return self._height
+        """ retrieves the height of rectangle """
+
+        return (self.__height)
 
     @height.setter
     def height(self, value):
+        """ sets the height of a rectangle """
+
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self._height = value
+
+        self.__height = value
