@@ -4,7 +4,5 @@
 
 class Rectangle:
 
-    pass
-
 def __init__(self):
         """ initializes an instance of classes """
