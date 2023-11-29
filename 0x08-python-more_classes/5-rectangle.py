@@ -1,51 +1,51 @@
-#bin/usr/python3
+#!/usr/bin/python3
+""" function to define attr of rectangle """
 
-#define rectangle attr
+
 class Rectangle:
-    """
-    a class called a rectangle
+    """ a class called rectangle
+        Args:
+            width - of rectangle
+            height - of rectangle
 
-    Args:
-    width -of Rectangle
-    height of Rectangle
+        Raises:
+            TypeError - if not int
+            ValueError - if value is less than zero
+        """
 
-    raise:
-
-    TypeError if not int
-    ValueError if value is less than zero
-    """
     count_instances = 0
 
-    def __init__ (self, width=0, height=0):
-        #initiaize an instance of rectangle
+    def __init__(self, width=0, height=0):
+        """ initializes an instance of rectangle """
 
         self.__width = width
         self.__height = height
         Rectangle.count_instances += 1
 
-        @property
-        def width(self):
-            #return width rectangle
-            return(self.__width)
+    @property
+    def width(self):
+        """ returns width of rectangle """
 
-            @width.setter
-        def (width, value):
-            """set attribute width"""
-            if not isinstance (value,int):
+        return (self.__width)
 
-                raise TypeError("width must be an interger")
-                if value < 0
-                raise ValueError("width must be >=0")
+    @width.setter
+    def width(self, value):
+        """ sets the attribute width """
+
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
 
         self.__width = value
 
-        @property
-        def height(self):
-            #return the height of a rectangle
+    @property
+    def height(self):
+        """ retrieves the height of rectangle """
 
-            rturn (self.__height)
+        return (self.__height)
 
-              @height.setter
+    @height.setter
     def height(self, value):
         """ sets the height of a rectangle """
 
