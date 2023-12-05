@@ -1,11 +1,10 @@
 #!/usr/bin/python3
+""" a function to lookup methods of an object """
 
-""" A function that returns a list"""
 
 def lookup(obj):
+    """ method to look for attributes of an object """
 
-    """ Return a list"""
-
-    return(dir) obj
+    return dir(obj)
 
 
